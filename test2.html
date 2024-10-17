@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pop-Up Offer</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Optional: If you want the modal to show right away after the page loads */
+      .modal-backdrop {
+        display: none;
+      }
+    </style>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="offerModal"
+      tabindex="-1"
+      aria-labelledby="offerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="offerModalLabel">Exclusive Offer!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h4>Get 20% Off on Your First Purchase!</h4>
+            <p>Sign up now and grab this limited-time offer. Don't miss out!</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Claim Offer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS (Popper.js and Bootstrap) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      // Show the modal as soon as the page loads
+      window.onload = function () {
+        var myModal = new bootstrap.Modal(
+          document.getElementById("offerModal")
+        );
+        myModal.show();
+      };
+    </script>
+  </body>
+</html>
